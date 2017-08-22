@@ -1,0 +1,13 @@
+name: Achievement-survie
+version: 0.1
+description: partie survie des achievements
+author: Amosar
+
+depend: [Achievement]
+
+main: com.trafalcraft.achievement.survie.Main
+
+commands:
+   AchievementSurvie:
+     description: Base command for the Achievement plugin.
+     aliases: [achSurvie]
