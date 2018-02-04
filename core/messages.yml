@@ -1,0 +1,36 @@
+version: 0.1
+default:
+  prefix: "&btr-achievement &9&l> &r&b "
+  error: "&4tr-achievement &l> &r&c "
+  no_permission: "&4Error &9&l> &r&bYou dont have permission to do that!"
+  command_use: "&4tr-achievement &l> &r&cCommand usage: &6/ach $commande"
+setup:
+  achievement_exist: "The achievement $achievement already exist"
+  achievement_not_exist: "The achievement $achievement doesn't exist"
+  achievement_add: "The achievement $achievement have been added"
+  achievement_remove: "The achievement $achievement have been remove"
+  setValue: "$value updated"
+player:
+  reward_taken: "You have receive the reward"
+  reward_error: "An error as occurred, please contact the administrator"
+  achievement_success_msg:
+    - "&2=================================="
+    - "&3Achievement get &6$achievementName"
+    - "&3$achievementDescription"
+    - "&2=================================="
+  achievement_success_title:
+    enable: true
+    title: "&6achievementName"
+    subtitle: "&achievement get $achievementName"
+  achievement_success_broadcast_msg: "&3$player has reward the &6$achievementName &3achievement"
+  achievement_success_mouseHover_msg: "&6Goal: \n&k$achievementDescription"
+  hidden_achievement_success_broadcast_msg: "&3$player has reward the &6$achievementName &3hidden achievement"
+
+gui:
+  progress: "&Progress: &6$actualValue/$goal"
+  no_reward_text: "&6Reward: &aJust for glory"
+  achievement_progress:
+    - "&a-=§6Information about the achievement &e$achievementName &a=-"
+    - "&aDescription: &6$achievementDescription"
+    - "&aProgress: &6$actualValue/$goal"
+    - "&aReward: $achievementReward"

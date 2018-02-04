@@ -11,6 +11,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
@@ -24,9 +25,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.metadata.FixedMetadataValue;
 
-import com.trafalcraft.Achievement.cache.achievement.AchievementList;
-import com.trafalcraft.Achievement.cache.player.ManageCache;
-import com.trafalcraft.Achievement.util.Msg;
+import com.trafalcraft.achievement.cache.achievement.AchievementList;
+import com.trafalcraft.achievement.cache.player.ManageCache;
+import com.trafalcraft.achievement.util.Msg;
 
 public class PlayerListener implements Listener{
 	
@@ -35,7 +36,7 @@ public class PlayerListener implements Listener{
 		System.out.println(e.getStatistic());
 	}*/
 	
-	//Achievement Je vole
+	//achievement Je vole
 		@EventHandler
 		public void onJeVole(PlayerStatisticIncrementEvent e){
 			if(e.getStatistic() == Statistic.AVIATE_ONE_CM){
@@ -110,7 +111,7 @@ public class PlayerListener implements Listener{
 			}
 		}*/
 		
-		//Achievement Courrez pauvre fou !
+		//achievement Courrez pauvre fou !
 		@EventHandler
 		public void onCourrezPauvreFou(PlayerItemConsumeEvent e){
 			if(e.getItem().getType() == Material.GOLDEN_APPLE && e.getItem().getDurability() == 1){
@@ -125,7 +126,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 	
-		//Achievement Plus encore Plusss de Diamant
+		//achievement Plus encore Plusss de Diamant
 		@EventHandler
 		public void onPlusEncorePlusssDeDiamant(PlayerStatisticIncrementEvent e){
 			if(e.getStatistic() == Statistic.MINE_BLOCK && e.getMaterial() == Material.DIAMOND_ORE){
@@ -163,7 +164,7 @@ public class PlayerListener implements Listener{
 			}
 		}*/
 		
-		//Achievement genocide
+		//achievement genocide
 		@EventHandler
 		public void onGenocide(PlayerStatisticIncrementEvent e){
 			if(e.getStatistic() == Statistic.PLAYER_KILLS){
@@ -204,7 +205,7 @@ public class PlayerListener implements Listener{
 			}
 		}*/
 		
-		//Achievement coup dou pelle
+		//achievement coup dou pelle
 		@EventHandler
 		public void onCoupDouPelle(EntityDamageByEntityEvent e){
 			if(e.getEntityType() == EntityType.PLAYER && e.getDamager() instanceof Player){
@@ -229,7 +230,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 		
-		//Achievement La faucheuse
+		//achievement La faucheuse
 		@EventHandler
 		public void onLaFaucheuse(EntityDamageByEntityEvent e){
 			if(e.getEntityType() == EntityType.PLAYER && e.getDamager() instanceof Player){
@@ -254,7 +255,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 		
-		//Achievement Je volais !
+		//achievement Je volais !
 		@EventHandler
 		public void onJeVolais(PlayerDeathEvent e){
 			if(!(e.getEntity() instanceof Player)){
@@ -276,7 +277,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 		
-		//Achievement Marathonien
+		//achievement Marathonien
 		@EventHandler
 		public void onMarathonien(PlayerMoveEvent e){
 			Player p = e.getPlayer();
@@ -302,7 +303,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 		
-		//Achievement nageur pro
+		//achievement nageur pro
 		@EventHandler
 		public void onNageurPro(PlayerMoveEvent e){
 			Player p = e.getPlayer();
@@ -379,7 +380,7 @@ public class PlayerListener implements Listener{
 				}
 		}*/
 		
-		//Achievement ecolo
+		//achievement ecolo
 		@EventHandler
 		public void onEcolo(BlockPlaceEvent e){
 			if(e.getBlock().getType() == Material.SAPLING){
@@ -414,7 +415,7 @@ public class PlayerListener implements Listener{
 		
 		
 		
-		/*//Achievement Ma premiere fois
+		/*//achievement Ma premiere fois
 		@EventHandler
 		public void onMaPremiereFois(PlayerBedEnterEvent e){
 			String[] achievement = AchievementList.getAchievementDataByName("Ma_premiere_fois");
@@ -427,7 +428,7 @@ public class PlayerListener implements Listener{
 			}
 		}*/
 		
-		//Achievement Bunny jumping
+		//achievement Bunny jumping
 		@EventHandler
 		public void onBunnyJumping(PlayerStatisticIncrementEvent e){
 			if(e.getStatistic() == Statistic.JUMP && e.getNewValue() == 1000){
@@ -440,7 +441,7 @@ public class PlayerListener implements Listener{
 		}
 
 		
-		//Achievement Sous l'ocean Sous...
+		//achievement Sous l'ocean Sous...
 		@EventHandler
 		public void onSousLoceanSous(PlayerStatisticIncrementEvent e){
 			if(e.getStatistic() == Statistic.KILL_ENTITY && e.getNewValue() == 1 && e.getEntityType() == EntityType.GUARDIAN){
@@ -468,7 +469,7 @@ public class PlayerListener implements Listener{
 				}
 			}*/
 		
-		//Achievement Eazy !
+		//achievement Eazy !
 		/*@EventHandler
 		public void onEazy(PlayerStatisticIncrementEvent e){
 			if(e.getStatistic() == Statistic.KILL_ENTITY && e.getNewValue() == 1 && e.getEntityType() == EntityType.WITHER){
@@ -497,7 +498,7 @@ public class PlayerListener implements Listener{
 		}
 		
 		
-		//Achievement Chauve qui peut !
+		//achievement Chauve qui peut !
 		@EventHandler
 		public void onChauveQuiPeut(PlayerShearEntityEvent e){
 			if(!(e.getEntity() instanceof Sheep)){
@@ -524,7 +525,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 		
-		//Achievement On a la classe ou on ne l'a pas
+		//achievement On a la classe ou on ne l'a pas
 		@EventHandler
 		public void onOnALaClasseOuOnNeLaPasInventoryClick(InventoryClickEvent e){
 			if(!(e.getWhoClicked() instanceof Player)){
@@ -615,7 +616,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 		
-		//Achievement j'aime le monde
+		//achievement j'aime le monde
 		@EventHandler
 		public void onJaimeLeMondePlayerDropItem(PlayerDropItemEvent e){
 			if(e.getItemDrop().getItemStack().getType() == Material.PAPER){
@@ -627,24 +628,28 @@ public class PlayerListener implements Listener{
 		}
 		
 		@EventHandler
-		public void onJaimeLeMondePlayerPickupItem(PlayerPickupItemEvent e){
-			if(e.getItem().getItemStack().getType() == Material.PAPER){
-				ItemMeta meta = e.getItem().getItemStack().getItemMeta();
-				if(meta.getDisplayName().equalsIgnoreCase("lettre d'amour")){
+		public void onJaimeLeMondePlayerPickupItem(EntityPickupItemEvent e){
+			if(e.getEntity() instanceof Player) {
+				Player p = (Player) e.getEntity();
+				if (e.getItem().getItemStack().getType() == Material.PAPER) {
+					ItemMeta meta = e.getItem().getItemStack().getItemMeta();
+					if (meta.getDisplayName().equalsIgnoreCase("lettre d'amour")) {
 					/*for(int i = 0;i<e.getItem().getMetadata("j'aime le monde").size();i++){
 						System.out.println("J'aime le monde "+i+">"+e.getItem().getMetadata("j'aime le monde").get(i).value());
 					}*/
-					if((Player) e.getItem().getMetadata("j'aime le monde").get(0).value() == e.getPlayer()){
-						return;
-					}
-					Player p2 = (Player) e.getItem().getMetadata("j'aime le monde").get(0).value();
-					String[] achievement = AchievementList.getAchievementDataByName("j'aime_le_monde");
-					if(achievement != null){
-						String[] info = ManageCache.getCache(p2).getAchievementData("j'aime_le_monde");
-						if(info == null){
-							ManageCache.getCache(p2).addAchievement("j'aime_le_monde", "1", true,false);
-							Msg.sendSuccess(p2, achievement[1].replace("_", " "), achievement[2], Boolean.valueOf(achievement[4]));
-						}	
+						if ((Player) e.getItem().getMetadata("j'aime le monde").get(0).value() == p) {
+							return;
+						}
+						Player p2 = (Player) e.getItem().getMetadata("j'aime le monde").get(0).value();
+						String[] achievement = AchievementList.getAchievementDataByName("j'aime_le_monde");
+						if (achievement != null) {
+							String[] info = ManageCache.getCache(p2).getAchievementData("j'aime_le_monde");
+							if (info == null) {
+								ManageCache.getCache(p2).addAchievement("j'aime_le_monde", "1", true, false);
+								Msg.sendSuccess(p2, achievement[1].replace("_", " "), achievement[2],
+									Boolean.valueOf(achievement[4]));
+							}
+						}
 					}
 				}
 			}
@@ -732,7 +737,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 		
-		//Achievement Serial bucheron
+		//achievement Serial bucheron
 		@EventHandler
 		public void onSerialbucheron(EntityDamageByEntityEvent e){
 			if(e.getEntity().getType() == EntityType.PLAYER && e.getDamager() instanceof Player){
@@ -766,7 +771,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 		
-		/*//Achievement Au Mon Dieu...
+		/*//achievement Au Mon Dieu...
 		@EventHandler
 		public void onAuMonDieu(PlayerStatisticIncrementEvent e){
 			if(e.getStatistic() == Statistic.PLAYER_KILLS){
@@ -781,7 +786,7 @@ public class PlayerListener implements Listener{
 			}
 		}*/
 		
-		//Achievement Je serais chevalier
+		//achievement Je serais chevalier
 		@EventHandler
 		public void onJeSeraisChevalier(EntityDamageByEntityEvent e){
 			if(e.getEntity().getType() == EntityType.PLAYER && e.getDamager() instanceof Player){
@@ -815,7 +820,7 @@ public class PlayerListener implements Listener{
 			}
 		}
 		
-		//Achievement Genius
+		//achievement Genius
 		@EventHandler
 		public void onGenius(EntityDamageByEntityEvent e){
 			if(e.getEntityType() == EntityType.PLAYER && e.getDamager() instanceof Player){

@@ -19,12 +19,12 @@ import org.bukkit.inventory.meta.BookMeta.Generation;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import com.trafalcraft.Achievement.Api.Rewards;
-import com.trafalcraft.Achievement.Api.util.RewardUtil;
-import com.trafalcraft.Achievement.cache.achievement.AchievementList;
-import com.trafalcraft.Achievement.cache.player.ManageCache;
-import com.trafalcraft.Achievement.util.Msg;
-import com.trafalcraft.Achievement.util.NMSItem;
+import com.trafalcraft.achievement.api.Rewards;
+import com.trafalcraft.achievement.api.util.RewardUtil;
+import com.trafalcraft.achievement.cache.achievement.AchievementList;
+import com.trafalcraft.achievement.cache.player.ManageCache;
+import com.trafalcraft.achievement.util.Msg;
+import com.trafalcraft.achievement.util.NMSItem;
 
 public class Reward implements Rewards{
 

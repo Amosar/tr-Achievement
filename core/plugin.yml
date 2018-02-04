@@ -1,12 +1,12 @@
-name: Achievement
+name: achievement
 version: 0.1
-description: Achievement
+description: achievement
 author: Amosar
 depend: [Vault, Citizens]
 
-main: com.trafalcraft.Achievement.Main
+main: com.trafalcraft.achievement.Main
 
 commands:
    Achievement:
-     description: Base command for the Achievement plugin.
+     description: Base command for the achievement plugin.
      aliases: [ach]

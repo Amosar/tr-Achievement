@@ -4,17 +4,5 @@ database:
   port: 3306
   user: root
   pass: pass
-  db: Achievement
+  db: achievement
   prefix: trAchievement_
-Msg:
-  default:
-    prefix: "&btr-Achievement &9&l> &r&b "
-    error: "&4tr-Achievement &l> &r&c "
-    no_permission: "&4Erreur &9&l> &r&bYou dont have permission to do that!"
-    command_use: "&4tr-Achievement &l> &r&cCommand usage: &6/ach $commande"
-  setup:
-    achievement_exist: "L'achievement $achievement éxiste déjà"
-    achievement_not_exist: "L'achievement $achievement n'éxiste pas"
-    achievement_add: "L'achievement $achievement à été ajouté"
-    achievement_remove: "L'achievement $achievement à été supprimé"
-    setValue: "$value mis à jour"

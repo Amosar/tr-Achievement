@@ -6,7 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.trafalcraft.Achievement.Api.AchievementApi;
+import com.trafalcraft.achievement.api.AchievementApi;
 
 public class Main extends JavaPlugin{
 	
